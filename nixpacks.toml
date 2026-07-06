@@ -1,0 +1,9 @@
+# pdftotext (poppler-utils) es requerido para extraer texto de los PDF GDE.
+[phases.setup]
+nixPkgs = ["python311", "poppler_utils"]
+
+[phases.install]
+cmds = ["pip install -r requirements.txt"]
+
+[start]
+cmd = "python server.py"
